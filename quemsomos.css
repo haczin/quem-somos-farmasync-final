@@ -1,0 +1,92 @@
+:root {
+  --navy:  #1a2a4a;
+  --green: #4caf50;
+  --light: #f0f2f5;
+  --white: #ffffff;
+  --text:  #333;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--light);
+  color: var(--text);
+  padding: 40px 24px;
+}
+
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  transition: background .2s, transform .2s;
+}
+.btn-voltar:hover {
+  background: var(--green);
+  transform: translateX(-4px);
+}
+
+.section { max-width: 1100px; margin: 0 auto 48px; }
+
+.section-title {
+  font-size: 1.5rem; font-weight: 700; color: var(--navy);
+  margin-bottom: 28px; position: relative; padding-left: 16px;
+}
+.section-title::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px; border-radius: 4px;
+  background: var(--green);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+  transition: transform .25s, box-shadow .25s;
+  border-top: 4px solid transparent;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  border-top-color: var(--green);
+}
+
+.avatar {
+  width: 72px; height: 72px; border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; font-weight: 700; color: white;
+}
+.avatar.navy  { background: var(--navy); }
+.avatar.green { background: var(--green); }
+.avatar.teal  { background: #00897b; }
+
+.card h3 { font-size: 0.95rem; font-weight: 700; color: var(--navy); line-height: 1.3; }
+.card .role {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+.role.backend  { background: #e8f5e9; color: #2e7d32; }
+.role.frontend { background: #e3f2fd; color: #1565c0; }
+.role.manager  { background: #fff3e0; color: #e65100; }
